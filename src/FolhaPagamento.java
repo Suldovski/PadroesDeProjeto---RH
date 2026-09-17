@@ -13,7 +13,7 @@ public class FolhaPagamento {
             if (salario < 0) {
                 throw new IllegalArgumentException("Salário não pode ser negativo.");
             }
-            System.out.println("Pagamento processado: R$" + salario);
+            System.out.printf("Pagamento processado: R$ %.2f%n", salario);
 
         } catch (Exception e) {
             System.err.println("Erro ao processar pagamento: " + e.getMessage());
