@@ -9,4 +9,3 @@ public class FuncionarioCLT extends Funcionario {
         return salarioBase * 1.10;
     }
 }
-

@@ -1,4 +1,4 @@
-public class FuncionarioPJ extends Funcionario{
+public class FuncionarioPJ extends Funcionario {
 
     public FuncionarioPJ(String nome, double salarioBase) {
         super(nome, salarioBase);
@@ -6,7 +6,6 @@ public class FuncionarioPJ extends Funcionario{
 
     @Override
     public double calcularSalario() {
-        return salarioBase;
+        return salarioBase; 
     }
-
 }

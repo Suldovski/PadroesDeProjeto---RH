@@ -6,7 +6,8 @@ public class FuncionarioFactory {
         } else if (tipo.equalsIgnoreCase("PJ")) {
             return new FuncionarioPJ(nome, salarioBase);
         } else {
-            throw new IllegalArgumentException("Tipo de funcionário inválido: " + tipo);
+            System.out.println("Tipo de funcionário inválido: " + tipo);
+            return null;
         }
     }
 }

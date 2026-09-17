@@ -13,21 +13,21 @@ public class Main {
 
         System.out.println("Lista de Funcionários:");
         for (Funcionario funcionario : funcionarios) {
-            System.out.printf("Nome: %s, Salário: R$ %.2f%n", funcionario.getNome(), funcionario.calcularSalario());
+            System.out.printf("Nome: %s, Salário: R$ %.2f%n", 
+                funcionario.getNome(), funcionario.calcularSalario());
         }
-    
+
         System.out.println("\nProcessando Pagamentos:");
         for (Funcionario f : funcionarios) {
             FolhaPagamento folha = new FolhaPagamento(f);
             folha.processarPagamento();
         }
 
-        System.out.println("\nTeste de exceção");
-        try{
-            Funcionario invalido = FuncionarioFactory.criarFuncionario("Estagiário", "Carlos", 1000.0);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Erro Capturado: " + e.getMessage());
+        System.out.println("\nTeste de tipo inválido:");
+        Funcionario invalido = FuncionarioFactory.criarFuncionario("Estagiário", "Carlos", 1000.0);
+
+        if (invalido == null) {
+            System.out.println("Não foi possível criar o funcionário.");
         }
     }
-
 }
