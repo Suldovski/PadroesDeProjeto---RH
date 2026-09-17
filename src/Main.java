@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
         Funcionario f1 = FuncionarioFactory.criarFuncionario("CLT", "João", 3000.0);
@@ -13,9 +13,9 @@ public class Main {
 
         System.out.println("Lista de Funcionários:");
         for (Funcionario funcionario : funcionarios) {
-            System.out.println("Nome: " + funcionario.getNome() + ", Salário: " + funcionario.calcularSalario());
+            System.out.printf("Nome: %s, Salário: R$ %.2f%n", funcionario.getNome(), funcionario.calcularSalario());
         }
-
+    
         System.out.println("\nProcessando Pagamentos:");
         for (Funcionario f : funcionarios) {
             FolhaPagamento folha = new FolhaPagamento(f);
