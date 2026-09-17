@@ -1,4 +1,4 @@
-public class Funcionario implements Pagavel {
+public abstract class Funcionario implements Pagavel {
     protected String nome;
     protected double salarioBase;
 
